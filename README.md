@@ -44,3 +44,7 @@ A sample Kubernetes application which does the following:
 4. Access the application:
     ```sh
     minikube service loco
+
+5. Minikube's Built-in Port Forwarding to 80:
+    ```sh
+    sudo kubectl port-forward svc/loco 80:80
