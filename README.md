@@ -1,6 +1,6 @@
 # Loco Kubernetes Python App
 A sample Kubernetes application which does the following:
-1. Create a Multi stage docker build on any of the following service nodejs, go, python
+1. Create a Multi stage docker build on python
 2. Push the docker image to public docker repo
 3. Create deployment configuration files that satisfy the following requirements.
 4. We would like to deploy this docker image on Kubernetes.
@@ -9,7 +9,8 @@ A sample Kubernetes application which does the following:
 7. Create scaling policy for the deployment
 8. Scaling of pod will be based on CPU
 9. Target CPU utilization is 60%.
-10. You can use minikube or other K8s tools to run Kubernetes applications locally. Every configuration should be written in the file.
+10. Use minikube to run Kubernetes applications locally. 
+11. Every configuration should be written in the file.
 
 
 ## Building and Pushing Docker Image
@@ -17,6 +18,10 @@ A sample Kubernetes application which does the following:
 1. Build the Docker image:
    ```sh
    docker build -t sarkararnab/loco:latest app/
+
+2. Push Docker image to Dockerhub:
+   ```sh
+   ddocker push sarkararnab/loco:latest
 
 
 ## Deploying to Kubernetes
